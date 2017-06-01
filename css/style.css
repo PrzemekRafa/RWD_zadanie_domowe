@@ -1,6 +1,6 @@
 /* Arkusz styli do zadania domowego z RWD */
 
-/* Reset ustawiń */
+/* Reset ustawień */
 * {
     margin: 0;
     padding: 0;
@@ -8,31 +8,80 @@
     font-family: 'Verdana', sans-serif;
 }
 
-#photo_container {
-    width: 100vw;
-    height: 70vw;
-    background-image: url(../img/man-1.jpg);
-    background-size: 100%;
-    background-position: top left;
-    background-repeat: no-repeat;
-    position: relative;
+/* Style dla ponad 1170px */
+
+        #photo_container {
+            width: 100vw;
+            height: 100vh;
+            background-image: url(../img/man-1.jpg);
+            background-size: 100%;
+            background-position: top left;
+            background-repeat: no-repeat;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #text_container {
+            position: absolute;
+            top: 35vw;
+            transform: translateY(-50%);
+            color: white;
+            padding-left: 3%;
+        }
+
+        h1 {
+            font-size: 1.6em;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            font-size: 2.45em;
+            text-transform: uppercase;
+        }
+
+/* Style dla rozdzielczości od 992-1170px */
+
+@media screen and (min-width: 992px) and (max-width: 1170px) {
+        #photo_container {
+            background-image: url(../img/man-2.jpg);
+            height: 70vh;
+        }
+    
+        #text_container {
+            top: 25%;
+            padding-left: 58%;
+        }
 }
 
-#text_container {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    color: white;
-    padding-left: 3em;
-}
+/* Style dla rozdzielczoej 992px */
 
-h1 {
-    font-size: 1.6em;
-    text-transform: uppercase;
-}
+@media screen and (max-width: 991px) {
+        #photo_container {
+            background-image: url(../img/man-1.jpg);
+            height: 50vh;
+            overflow: visible;
+        }
+        
+    #text_container {
+            top: 50vh;
+            padding-left: 58%;
+            text-align: center;
+            padding: 0;
+            left: 0;
+            right: 0;
+            transform: translateY(0%)
+        }
+        h1 {
+            font-size: 3.2em;
+            line-height: 3.2em;
+            text-transform: uppercase;
+            color: black;
+        }
 
-h2 {
-    font-size: 2.45em;
-    text-transform: uppercase;
+        h2 {
+            font-size: 5em;
+            text-transform: uppercase;
+            color: black;
+        }
+    
 }
-
