@@ -10,7 +10,7 @@
 
 #photo_container {
     width: 100vw;
-    height: 70em;
+    height: 70vw;
     background-image: url(../img/man-1.jpg);
     background-size: 100%;
     background-position: top left;
@@ -19,13 +19,9 @@
 }
 
 #text_container {
-    height: 180px;
-    margin: auto;
     position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
     color: white;
     padding-left: 3em;
 }
@@ -35,8 +31,8 @@ h1 {
     text-transform: uppercase;
 }
 
-span {
-    font-size: 2.4em;
+h2 {
+    font-size: 2.45em;
     text-transform: uppercase;
 }
 
